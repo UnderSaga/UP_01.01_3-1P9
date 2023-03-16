@@ -11,9 +11,9 @@
         <StackPanel>
             <Label Content="Фильтр"/>
             <TextBox x:Name="filterTextBox"
-                     TextChanged="filterTextBox_TextChanged"/>
+                     Text="{Binding FilterText, UpdateSourceTrigger=PropertyChanged}"/>
             <ListBox x:Name="groups"
-                     ItemsSource="{Binding Groups}"
+                     ItemsSource="{Binding Items}"
                      DisplayMemberPath="Code"
                      SelectionChanged="groups_SelectionChanged"/>
         </StackPanel>
