@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using JournalApp.Models;
-
+using JournalApp.ViewModels;
 
 namespace JournalApp.Views
 {
@@ -54,6 +54,11 @@ namespace JournalApp.Views
             Hide();
             groupWindow.ShowDialog();
             Show();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataContext = new GroupsViewModel();
         }
     }
 }
