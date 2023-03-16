@@ -15,5 +15,6 @@ namespace JournalApp.ViewModels
             var users = Session.Entities.User.ToList().Where(u => u.UserName == login && u.Password == password);
             return Session.CurrentUser = users.Count() == 1 ? users.First() : null;
         }
+
     }
 }
