@@ -40,6 +40,11 @@ namespace JournalApp.Views
         {
             DataContext = new GroupsViewModel();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataContext = new GroupsViewModel();
+        }
     }
 }
  
